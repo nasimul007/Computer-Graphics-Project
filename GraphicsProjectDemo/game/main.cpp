@@ -326,11 +326,26 @@ glBegin(GL_POLYGON);
 
 }
 
+void Grass()
+{
+    glBegin(GL_POLYGON);//roof
+    glColor3f(0.0f, 1.0f, 0.0f);
+    //glColor3ub(147, 78, 29);
+    glVertex2f(-1.0f,-1.0f);
+    glVertex2f(0.55f,-1.0f);
+    glColor3ub(18, 132, 22);
+    glVertex2f(0.43f,-0.8f);
+    glVertex2f(-1.0f,0.15f);
+
+    glEnd();
+}
+
 
  void display()
  {
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
    glClear(GL_COLOR_BUFFER_BIT);
+   Grass();
 Rasta();
 Head();
 Hand();
